@@ -154,9 +154,9 @@ if $buildroot; then
   
   fi
 
-  touch $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Create hostname file
+  #touch $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Create hostname file
   
-  echo $config > $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Set the hostname
+  #echo $config > $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Set the hostname
 
   cp -fv $CONFIGS/genimage.cfg $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/  # Copy the genimage.cfg
 

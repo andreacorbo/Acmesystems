@@ -31,3 +31,8 @@
 #
 5-59/30 * * * * python /root/scripts/modem.py --ota
 
+#
+# Send alerts.
+#
+*/5 * * * * python /root/scripts/modem.py --alert
+

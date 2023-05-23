@@ -52,5 +52,5 @@ console::once:/usr/bin/python /root/scripts/modem.py --startup
 console::respawn:/usr/bin/python /root/abc2/main.py
 
 # Respawn the webserver.
-console::respawn:/usr/bin/python /root/wi1/main.py
+#console::respawn:/usr/bin/python /root/wi1/main.py
 

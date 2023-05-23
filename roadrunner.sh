@@ -144,7 +144,7 @@ if $buildroot; then
 
   fi
 
-  rm -rv $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay
+  rm -rfv $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay
 
   cp -rvL $CONFIGS/rootfs_overlay $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/  # Copy the root-overlays
   
@@ -154,9 +154,9 @@ if $buildroot; then
   
   fi
 
-  touch $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Create hostname file
+  #touch $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Create hostname file
   
-  echo $config > $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Set the hostname
+  #echo $config > $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/rootfs_overlay/etc/hostname  # Set the hostname
 
   cp -fv $CONFIGS/genimage.cfg $ROOT/$BUILDROOT/board/acmesystems/$BUILDROOT_TARGET/  # Copy the genimage.cfg
 
@@ -264,13 +264,13 @@ if $write; then
   
   sudo rm -rfv $ROOT/$BOOT/*
 
-  cp -fv $ROOT/$BOOTSTRAP/build/binaries/boot.bin $ROOT/$BOOT
+  sudo cp -fv $ROOT/$BOOTSTRAP/build/binaries/boot.bin $ROOT/$BOOT
 
-  cp -fv $ROOT/$KERNEL/arch/arm/boot/dts/$KERNEL_TARGET.dtb $ROOT/$BOOT
+  sudo cp -fv $ROOT/$KERNEL/arch/arm/boot/dts/$KERNEL_TARGET.dtb $ROOT/$BOOT
 
-  cp -fv $ROOT/$KERNEL/arch/arm/boot/zImage $ROOT/$BOOT  
+  sudo cp -fv $ROOT/$KERNEL/arch/arm/boot/zImage $ROOT/$BOOT  
   
-  cp -fv $CONFIGS/cmdline.txt $ROOT/$BOOT/
+  sudo cp -fv $CONFIGS/cmdline.txt $ROOT/$BOOT/
   
   sudo find $ROOT/$ROOTFS -mindepth 1 -delete
 
