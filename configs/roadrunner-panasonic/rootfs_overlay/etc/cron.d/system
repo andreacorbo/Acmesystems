@@ -29,5 +29,5 @@
 #
 # Send data and receive updates.
 #
-5-59/30 * * * * python /root/scripts/iridium.py --ota --off
+5 * * * * python /root/scripts/iridium.py --ota
 

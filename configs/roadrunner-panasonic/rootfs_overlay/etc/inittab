@@ -46,7 +46,7 @@ console::respawn:/sbin/getty -L  console 0 vt100 # GENERIC_SERIAL
 ####################################################
 
 # Initializes modem at startup.                                                  
-console::once:/usr/bin/python /root/scripts/iridium.py --startup --off
+console::once:/usr/bin/python /root/scripts/iridium.py --startup
 
 # Respawn the scheduler.
 console::respawn:/usr/bin/python /root/abc2/main.py
